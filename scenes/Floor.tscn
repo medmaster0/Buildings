@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Floor.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Window.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Balcony.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tiles/floorPrim.png" type="Texture" id=5]
+
+[node name="Floor" type="Node2D"]
+
+script = ExtResource( 1 )
+Window = ExtResource( 2 )
+Door = ExtResource( 3 )
+Balcony = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 0, -64 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+

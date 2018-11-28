@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://City.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Cloud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Streetlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Creature.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tiles/blank.png" type="Texture" id=6]
+
+[node name="City" type="Node" index="0"]
+
+script = ExtResource( 1 )
+Cloud = ExtResource( 2 )
+Streetlight = ExtResource( 3 )
+Creature = ExtResource( 4 )
+Building = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
+
+layer = -13
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Background" type="Sprite" parent="CanvasLayer" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="MarkerTileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = null
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Cell", "Collision", "Z Index" ]
+
+
